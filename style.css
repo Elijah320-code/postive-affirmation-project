@@ -1,0 +1,139 @@
+/* Button Hover Effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 105, 180, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px 10px rgba(255, 105, 180, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 105, 180, 0);
+    }
+}
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    position: relative; /* Adjust position relative to the card */
+    top: 20px; /* Adjust this value to move the button below the card */
+    animation: pulse 2s infinite;
+}
+
+button:hover {
+    animation: pulse 1s infinite;
+}
+
+/* Button Click Effect */
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #080807;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-container {
+    text-align: center;
+}
+
+.card {
+    background-color: #fff0f5;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 40px;
+    margin: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#affirmationText {
+    color: #da70d6;
+    font-size: 24px;
+    margin: 0;
+}
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6eb4;
+}
+@keyframes glow {
+  0%, 100% {
+      box-shadow: 0 0 5px #ff69b4, 0 0 15px #ff69b4, 0 0 30px #ff69b4, 0 0 60px #ff69b4;
+  }
+  50% {
+      box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 40px #ff69b4, 0 0 80px #ff69b4;
+  }
+}
+
+.card {
+  background-color: #fff0f5;
+  border-radius: 8px;
+  padding: 40px;
+  margin: 20px;
+  transition: transform 0.3s ease-in-out;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    /* ... rest of your body styles */
+}
+
+.card {
+    /* ... rest of your .card styles */
+    font-family: 'Lato', sans-serif;
+}
+
+#affirmationText {
+    /* ... rest of your #affirmationText styles */
+    font-family: 'Pacifico', cursive;
+}
+
+button {
+    /* ... rest of your button styles */
+    font-family: 'Lato', sans-serif;
+}
+.card {
+    /* ... existing styles ... */
+    cursor: grab; /* Change the cursor to indicate draggable */
+}
+
+/* While dragging the element, change the cursor to grabbing */
+.card:active {
+    cursor: grabbing;
+}
+
+/* Rest of your styles for .card-container, #affirmationText, button, etc. */
+
+/* ... */
